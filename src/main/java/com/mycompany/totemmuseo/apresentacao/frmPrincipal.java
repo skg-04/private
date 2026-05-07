@@ -109,7 +109,7 @@ public class frmPrincipal extends javax.swing.JDialog
         lblFotoZhurong1 = new javax.swing.JLabel();
         lblTituloZhurong1 = new javax.swing.JLabel();
         lblTituloViking1 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblFotoViking1 = new javax.swing.JLabel();
         lblFotoInsight = new javax.swing.JLabel();
         lblTituloInsight = new javax.swing.JLabel();
         lblFotoViking2 = new javax.swing.JLabel();
@@ -215,17 +215,17 @@ public class frmPrincipal extends javax.swing.JDialog
         lblTituloViking1.setText("Viking 1");
         jPanel1.add(lblTituloViking1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 530, 300, 39));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgviki/image (1).png"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter()
+        lblFotoViking1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgviki/image (1).png"))); // NOI18N
+        lblFotoViking1.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseClicked(java.awt.event.MouseEvent evt)
             {
-                jLabel1MouseClicked(evt);
+                lblFotoViking1MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, 300, 220));
+        jPanel1.add(lblFotoViking1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, 300, 220));
 
-        lblFotoInsight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imInsight/3.glbimg.com-v1-auth-0ae9f161c1ff459593599b7ffa1a1292-images-escenic-2022-5-19-10-1652965910479.jpg"))); // NOI18N
+        lblFotoInsight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgInsight/3.glbimg.com-v1-auth-0ae9f161c1ff459593599b7ffa1a1292-images-escenic-2022-5-19-10-1652965910479.jpg"))); // NOI18N
         lblFotoInsight.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseClicked(java.awt.event.MouseEvent evt)
@@ -233,7 +233,7 @@ public class frmPrincipal extends javax.swing.JDialog
                 lblFotoInsightMouseClicked(evt);
             }
         });
-        jPanel1.add(lblFotoInsight, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 570, 340, 240));
+        jPanel1.add(lblFotoInsight, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 580, 340, 220));
 
         lblTituloInsight.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblTituloInsight.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -320,11 +320,11 @@ public class frmPrincipal extends javax.swing.JDialog
         zhurong.abrirTelaZhurong(this);
     }//GEN-LAST:event_lblFotoZhurong1MouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_jLabel1MouseClicked
-    {//GEN-HEADEREND:event_jLabel1MouseClicked
+    private void lblFotoViking1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoViking1MouseClicked
+    {//GEN-HEADEREND:event_lblFotoViking1MouseClicked
         Viking viking = new Viking();
         viking.abrirTelaViking(this);
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_lblFotoViking1MouseClicked
 
     private void lblFotoInsightMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoInsightMouseClicked
     {//GEN-HEADEREND:event_lblFotoInsightMouseClicked
@@ -334,8 +334,8 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void lblFotoViking2MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoViking2MouseClicked
     {//GEN-HEADEREND:event_lblFotoViking2MouseClicked
-        Viking2 beagle = new Viking2();
-        beagle.abrirTelaViking2(this);
+        Viking2 viking2 = new Viking2();
+        viking2.abrirTelaViking2(this);
     }//GEN-LAST:event_lblFotoViking2MouseClicked
 
     private void lblFotoPhoenixMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoPhoenixMouseClicked
@@ -347,47 +347,9 @@ public class frmPrincipal extends javax.swing.JDialog
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[])
-    {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex)
-        {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(() ->
-        {
-            frmPrincipal dialog = new frmPrincipal(new javax.swing.JFrame(), true);
-            dialog.addWindowListener(new java.awt.event.WindowAdapter()
-            {
-                @Override
-                public void windowClosing(java.awt.event.WindowEvent e)
-                {
-                    System.exit(0);
-                }
-            });
-            dialog.setVisible(true);
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblApresentacao1;
@@ -395,6 +357,7 @@ public class frmPrincipal extends javax.swing.JDialog
     private javax.swing.JLabel lblFotoInsight;
     private javax.swing.JLabel lblFotoPerseverance1;
     private javax.swing.JLabel lblFotoPhoenix;
+    private javax.swing.JLabel lblFotoViking1;
     private javax.swing.JLabel lblFotoViking2;
     private javax.swing.JLabel lblFotoZhurong1;
     private javax.swing.JLabel lblSpiritOpportunityFoto1;

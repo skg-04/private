@@ -11,6 +11,7 @@ import java.awt.BorderLayout;
 // Importa o gerenciador de layout BorderLayout, que divide a tela em 5 regiões (Norte, Sul, Leste, Oeste e Centro).
 
 import java.awt.Image;
+import javax.swing.text.BadLocationException;
 // Importa a classe genérica Image, necessária para usarmos a função de redimensionamento matemático das fotos estáticas.
 
 public class Perseverance 
@@ -135,7 +136,7 @@ public class Perseverance
             
             // Repete o processo para a terceira foto. Agora temos 3 fotos posicionadas na mesma linha do "documento"!
             
-        } catch (Exception e) {
+        } catch (BadLocationException e) {
             System.out.println("Aviso: Alguma(s) imagem(ns) não foi encontrada no caminho especificado.");
             // Bloco de captura de erros: Se um dos nomes de imagem estiver errado ou faltar, ele apenas imprime essa frase invisível para o usuário, mas não dá "Crash" no seu programa!
         }
