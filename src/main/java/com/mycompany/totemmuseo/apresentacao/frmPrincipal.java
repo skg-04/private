@@ -278,7 +278,7 @@ public class frmPrincipal extends javax.swing.JDialog
                 btnFeedbackMouseClicked(evt);
             }
         });
-        jPanel1.add(btnFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 40));
+        jPanel1.add(btnFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 150, 40));
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -286,11 +286,11 @@ public class frmPrincipal extends javax.swing.JDialog
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1444, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1452, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1290, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1120, Short.MAX_VALUE)
         );
 
         pack();
@@ -353,11 +353,10 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void btnFeedbackMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnFeedbackMouseClicked
     {//GEN-HEADEREND:event_btnFeedbackMouseClicked
-        btnFeedback.addActionListener(e ->
-        {
-            QuestionarioFeedback qf = new QuestionarioFeedback(this);
-            qf.setVisible(true);
-        });
+    
+        QuestionarioFeedback qf = new QuestionarioFeedback(this);
+        qf.setVisible(true);
+    
     }//GEN-LAST:event_btnFeedbackMouseClicked
 
     /**
