@@ -299,64 +299,107 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void lblsojournerFoto1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblsojournerFoto1MouseClicked
     {//GEN-HEADEREND:event_lblsojournerFoto1MouseClicked
+        // Cria uma nova instância (objeto) da classe Sojourner.
+        // Essa classe é responsável por gerenciar a tela específica do robô Sojourner.
         Sojourner sojourner = new Sojourner();
+
+        // Chama o método para exibir a tela do robô.
+        // O 'this' passa a janela atual (frmPrincipal) como referência para a nova tela,
+        // permitindo que ela saiba quem é a janela "mãe" para se posicionar ou bloquear o fundo.
         sojourner.abrirTelaSojourner(this);
+
     }//GEN-LAST:event_lblsojournerFoto1MouseClicked
 
     private void lblSpiritOpportunityFoto1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblSpiritOpportunityFoto1MouseClicked
     {//GEN-HEADEREND:event_lblSpiritOpportunityFoto1MouseClicked
+        // Cria o objeto responsável pela tela dos robôs Spirit e Opportunity.
+        // Instancia a classe que contém as informações e fotos desses robôs exploradores.
         spirit_Opportunity spiritopportunity = new spirit_Opportunity();
+
+        // Aciona o método que abre a janela de detalhes na tela.
+        // O 'this' garante que a nova janela fique vinculada corretamente à tela principal.
         spiritopportunity.abrirTelaSpiritOpportunity(this);
     }//GEN-LAST:event_lblSpiritOpportunityFoto1MouseClicked
 
     private void lblCuriosityFoto1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblCuriosityFoto1MouseClicked
     {//GEN-HEADEREND:event_lblCuriosityFoto1MouseClicked
+        // Instancia (cria) a classe do robô Curiosity, carregando seus dados e interface.
         Curiosity curiosity = new Curiosity();
+
+        // Executa o comando para tornar a tela do Curiosity visível para o usuário.
+        // Passa 'this' para manter a hierarquia entre a janela principal e a de detalhes.
         curiosity.abrirTelaCuriosity(this);
     }//GEN-LAST:event_lblCuriosityFoto1MouseClicked
 
     private void lblFotoPerseverance1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoPerseverance1MouseClicked
     {//GEN-HEADEREND:event_lblFotoPerseverance1MouseClicked
+        // Cria o objeto da classe Perseverance, preparando as informações sobre este rover.
         Perseverance perseverance = new Perseverance();
+
+        // Chama o método para abrir a interface do Perseverance em cima da tela principal.
+        // O parâmetro 'this' indica que o frmPrincipal é o dono (parent) desta nova janela.
         perseverance.abrirTelaPerseverance(this);
     }//GEN-LAST:event_lblFotoPerseverance1MouseClicked
 
     private void lblFotoZhurong1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoZhurong1MouseClicked
     {//GEN-HEADEREND:event_lblFotoZhurong1MouseClicked
+        // Instancia a classe Zhurong, que contém a história e imagens do primeiro rover chinês em Marte.
         Zhurong zhurong = new Zhurong();
+
+        // Abre a janela do Zhurong de forma vinculada à janela principal (frmPrincipal).
+        // Isso garante que a navegação seja organizada e o foco seja mantido na janela correta.
+        // O 'this' informa ao sistema que o frmPrincipal gerencia a abertura desta tela.
         zhurong.abrirTelaZhurong(this);
     }//GEN-LAST:event_lblFotoZhurong1MouseClicked
 
     private void lblFotoViking1MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoViking1MouseClicked
     {//GEN-HEADEREND:event_lblFotoViking1MouseClicked
+        // Cria a instância da classe Viking, que trata das primeiras missões lander a Marte.
         Viking viking = new Viking();
+
+        // Exibe a tela de detalhes da Viking, mantendo a tela principal como sua janela pai (parent).
+        // O 'this' informa ao sistema que o frmPrincipal gerencia a abertura desta tela.
         viking.abrirTelaViking(this);
     }//GEN-LAST:event_lblFotoViking1MouseClicked
 
     private void lblFotoInsightMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoInsightMouseClicked
     {//GEN-HEADEREND:event_lblFotoInsightMouseClicked
+        // Inicializa o objeto da classe Insight, preparando os dados geológicos e sísmicos do robô.
         Insight insight = new Insight();
+
+        // Abre a janela de informações do lander Insight sobreposta à janela principal.
+        // O 'this' informa ao sistema que o frmPrincipal gerencia a abertura desta tela.
         insight.abrirTelaInsight(this);
     }//GEN-LAST:event_lblFotoInsightMouseClicked
 
     private void lblFotoViking2MouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoViking2MouseClicked
     {//GEN-HEADEREND:event_lblFotoViking2MouseClicked
+        // Cria o objeto da classe Viking2 para exibir as informações desta missão específica.
         Viking2 viking2 = new Viking2();
+
+        // Ativa a exibição da janela da Viking 2 vinculada ao totem principal (this).
         viking2.abrirTelaViking2(this);
     }//GEN-LAST:event_lblFotoViking2MouseClicked
 
     private void lblFotoPhoenixMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lblFotoPhoenixMouseClicked
     {//GEN-HEADEREND:event_lblFotoPhoenixMouseClicked
+        // Instancia a classe Phoenix, que contém a história da missão que buscou água no polo norte de Marte.
         Phoenix phoenix = new Phoenix();
+
+        // Abre a janela da Phoenix de forma que ela seja filha da janela principal.
+        // O 'this' informa ao sistema que o frmPrincipal gerencia a abertura desta tela.
         phoenix.abrirTelaPhoenix(this);
     }//GEN-LAST:event_lblFotoPhoenixMouseClicked
 
     private void btnFeedbackMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnFeedbackMouseClicked
     {//GEN-HEADEREND:event_btnFeedbackMouseClicked
-    
+        // Cria o objeto da janela de Quiz e Feedback.
+        // O 'this' passa a tela principal como "dona" do questionário.
         QuestionarioFeedback qf = new QuestionarioFeedback(this);
+
+        // Torna a janela do questionário visível na tela para o usuário.
+        // Como configuramos o questionário como MODAL, o programa ficará focado aqui até fechar.
         qf.setVisible(true);
-    
     }//GEN-LAST:event_btnFeedbackMouseClicked
 
     /**
