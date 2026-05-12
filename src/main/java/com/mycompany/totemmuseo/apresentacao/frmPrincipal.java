@@ -22,9 +22,12 @@ public class frmPrincipal extends javax.swing.JDialog
         // Cria todos os componentes visuais da tela
         initComponents();
 
-        jPanel1.setPreferredSize(
-                new java.awt.Dimension(1450, 1150)
-        );
+        // Define o tamanho "alvo" (largura e altura) que o painel deseja ter.
+        // Como este painel está dentro de um JScrollPane (barra de rolagem), 
+        // este valor de 1150 de altura determina o limite da área rolável.
+        // Se o painel for maior que a tela, a barra de rolagem aparecerá automaticamente.
+        jPanel1.setPreferredSize(new java.awt.Dimension(1450, 1150));
+        
         // Define o tamanho ideal que o painel deve ocupar. 
         // Nota: Em JScrollPanes, isso determina a área total "rolável".
 
@@ -61,9 +64,12 @@ public class frmPrincipal extends javax.swing.JDialog
         // Cria todos os componentes gráficos
         initComponents();
 
-        jPanel1.setPreferredSize(
-                new java.awt.Dimension(1450, 1150)
-        );
+        // Define o tamanho "alvo" (largura e altura) que o painel deseja ter.
+        // Como este painel está dentro de um JScrollPane (barra de rolagem), 
+        // este valor de 1150 de altura determina o limite da área rolável.
+        // Se o painel for maior que a tela, a barra de rolagem aparecerá automaticamente.
+        jPanel1.setPreferredSize(new java.awt.Dimension(1450, 1150));
+        
         // Define o tamanho ideal que o painel deve ocupar. 
         // Nota: Em JScrollPanes, isso determina a área total "rolável".
 
