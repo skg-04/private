@@ -10,9 +10,6 @@ public class frmPrincipal extends javax.swing.JDialog
 // Classe principal da janela do sistema
 {
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(frmPrincipal.class.getName());
-    // Sistema de logs para registrar erros do programa
-
     // Construtor principal da janela
     public frmPrincipal(java.awt.Frame parent, boolean modal)
     {
@@ -88,6 +85,7 @@ public class frmPrincipal extends javax.swing.JDialog
 
         // Adiciona botão na tela
         botao.adicionar();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -116,6 +114,7 @@ public class frmPrincipal extends javax.swing.JDialog
         lblTituloViking2 = new javax.swing.JLabel();
         lblFotoPhoenix = new javax.swing.JLabel();
         lblTituloPhoenix = new javax.swing.JLabel();
+        btnFeedback = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Totem Museo Espacial");
@@ -132,8 +131,8 @@ public class frmPrincipal extends javax.swing.JDialog
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblApresentacao1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        lblApresentacao1.setText("<html>Bem-vindo ao museu espacial, aqui você irá descobrir um pouco sobre os robôs exploradores criados para uma missão importante de descobrir e analisar o planeta Marte. Abaixo você vai ver as fotos dos robôs e, se clicar nelas, vai conhecer um pouco da história de cada um.");
-        jPanel1.add(lblApresentacao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1370, 140));
+        lblApresentacao1.setText("<html>Bem-vindo ao museu espacial. Aqui você irá descobrir um pouco sobre os robôs exploradores criados para uma missão importante de descobrir e analisar o planeta Marte. Abaixo você vai ver as fotos dos robôs e, se clicar nelas, vai conhecer um pouco da história de cada um. Após terminar de conferir as informações dos robôs, por favor, vá para a aba questionários e nos dê uma avaliação de como foi a sua experiência com o nosso totem.");
+        jPanel1.add(lblApresentacao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1370, 140));
 
         lblsojournerFoto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ASY-SA0723_07-Sojourner-rover.jpg"))); // NOI18N
         lblsojournerFoto1.addMouseListener(new java.awt.event.MouseAdapter()
@@ -143,12 +142,12 @@ public class frmPrincipal extends javax.swing.JDialog
                 lblsojournerFoto1MouseClicked(evt);
             }
         });
-        jPanel1.add(lblsojournerFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 318, -1));
+        jPanel1.add(lblsojournerFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 318, -1));
 
         lblTituloSojourner1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblTituloSojourner1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloSojourner1.setText("Sojourner");
-        jPanel1.add(lblTituloSojourner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 179, 320, 50));
+        jPanel1.add(lblTituloSojourner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 320, 50));
 
         lblSpiritOpportunityFoto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/spiriteOpportunity.jpg"))); // NOI18N
         lblSpiritOpportunityFoto1.addMouseListener(new java.awt.event.MouseAdapter()
@@ -158,12 +157,12 @@ public class frmPrincipal extends javax.swing.JDialog
                 lblSpiritOpportunityFoto1MouseClicked(evt);
             }
         });
-        jPanel1.add(lblSpiritOpportunityFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 340, -1));
+        jPanel1.add(lblSpiritOpportunityFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 340, -1));
 
         lblTituloSpiritOpportunity1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblTituloSpiritOpportunity1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloSpiritOpportunity1.setText("Spirit e Opportunity");
-        jPanel1.add(lblTituloSpiritOpportunity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 179, 340, 50));
+        jPanel1.add(lblTituloSpiritOpportunity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 340, 50));
 
         lblCuriosityFoto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/_100519152_2.jpg"))); // NOI18N
         lblCuriosityFoto1.addMouseListener(new java.awt.event.MouseAdapter()
@@ -173,12 +172,12 @@ public class frmPrincipal extends javax.swing.JDialog
                 lblCuriosityFoto1MouseClicked(evt);
             }
         });
-        jPanel1.add(lblCuriosityFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 240, 321, 250));
+        jPanel1.add(lblCuriosityFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 260, 321, 250));
 
         lblTituloCuriosity1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblTituloCuriosity1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloCuriosity1.setText("Curiosity");
-        jPanel1.add(lblTituloCuriosity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 180, 320, 50));
+        jPanel1.add(lblTituloCuriosity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 320, 50));
 
         lblFotoPerseverance1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/_118653459_watsel_1_face_full.jpg (1).jpg"))); // NOI18N
         lblFotoPerseverance1.addMouseListener(new java.awt.event.MouseAdapter()
@@ -188,12 +187,12 @@ public class frmPrincipal extends javax.swing.JDialog
                 lblFotoPerseverance1MouseClicked(evt);
             }
         });
-        jPanel1.add(lblFotoPerseverance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 240, 290, -1));
+        jPanel1.add(lblFotoPerseverance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 260, 290, -1));
 
         lblTituloPerseverance1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblTituloPerseverance1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloPerseverance1.setText("Perseverance");
-        jPanel1.add(lblTituloPerseverance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 190, 290, 40));
+        jPanel1.add(lblTituloPerseverance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 210, 290, 40));
 
         lblFotoZhurong1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgzhu/zhu.png"))); // NOI18N
         lblFotoZhurong1.addMouseListener(new java.awt.event.MouseAdapter()
@@ -223,7 +222,7 @@ public class frmPrincipal extends javax.swing.JDialog
                 lblFotoViking1MouseClicked(evt);
             }
         });
-        jPanel1.add(lblFotoViking1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, 300, 220));
+        jPanel1.add(lblFotoViking1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 590, 300, 210));
 
         lblFotoInsight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgInsight/3.glbimg.com-v1-auth-0ae9f161c1ff459593599b7ffa1a1292-images-escenic-2022-5-19-10-1652965910479.jpg"))); // NOI18N
         lblFotoInsight.addMouseListener(new java.awt.event.MouseAdapter()
@@ -270,16 +269,24 @@ public class frmPrincipal extends javax.swing.JDialog
         lblTituloPhoenix.setText("Phoenix");
         jPanel1.add(lblTituloPhoenix, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 816, 320, 40));
 
+        btnFeedback.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnFeedback.setText("Questionários");
+        btnFeedback.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                btnFeedbackMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btnFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 150, 40));
+
         jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1432, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1444, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -344,12 +351,21 @@ public class frmPrincipal extends javax.swing.JDialog
         phoenix.abrirTelaPhoenix(this);
     }//GEN-LAST:event_lblFotoPhoenixMouseClicked
 
+    private void btnFeedbackMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnFeedbackMouseClicked
+    {//GEN-HEADEREND:event_btnFeedbackMouseClicked
+        btnFeedback.addActionListener(e ->
+        {
+            QuestionarioFeedback qf = new QuestionarioFeedback(this);
+            qf.setVisible(true);
+        });
+    }//GEN-LAST:event_btnFeedbackMouseClicked
+
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnFeedback;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblApresentacao1;

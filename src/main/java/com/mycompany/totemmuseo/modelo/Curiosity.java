@@ -55,9 +55,7 @@ public class Curiosity
 
                         <b>Curiosity: o laboratório móvel de Marte</b><br><br>
 
-                        Na Terra, onde há água, há vida. Sabemos que Marte teve água há muito tempo. Mas será que também possuía outras condições necessárias para a vida?<br><br>
-
-                        Para descobrir, a NASA enviou o rover Curiosity a Marte. O Curiosity é o maior robô a pousar em outro planeta. Ele tem aproximadamente o tamanho de um SUV pequeno.<br><br>
+                        O Curiosity é o maior robô a pousar em outro planeta. Ele tem aproximadamente o tamanho de um SUV pequeno.<br><br>
 
                         Por ser tão grande, o Curiosity também possui rodas maiores do que os robôs exploradores anteriores. Isso o ajuda a passar por cima de rochas e areia sem ficar atolado. No entanto, mesmo em um longo dia de viagem, ele ainda percorre apenas cerca de 200 metros.<br><br>
 
