@@ -28,7 +28,33 @@ public class frmPrincipal extends javax.swing.JDialog
         // Se o painel for maior que a tela, a barra de rolagem aparecerá automaticamente.
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
+        // Recalcula a estrutura visual do painel.
+        // O método revalidate() informa ao Swing que o componente mudou
+        // de tamanho, posição ou organização.
+        // Isso faz o Java recalcular o layout visual do jPanel1.
+        // No seu caso, ele é importante porque você alterou:
+        // jPanel1.setPreferredSize(...)
+        // Sem o revalidate(), o JScrollPane pode continuar usando
+        // o tamanho antigo do painel,
+        // causando problemas como:
+        // - scroll não aparecer
+        // - componentes desalinhados
+        // - espaço branco incorreto
+        // - painel não atualizar corretamente
         jPanel1.revalidate();
+
+        // Redesenha visualmente o painel na tela.
+        // O repaint() força o Swing a "pintar novamente"
+        // o componente.
+        // Isso atualiza:
+        // - imagem de fundo
+        // - labels
+        // - textos
+        // - alterações gráficas
+        // - transparências
+        // Sem repaint(), algumas mudanças podem só aparecer
+        // depois que a janela for minimizada,
+        // redimensionada ou atualizada manualmente.
         jPanel1.repaint();
 
         // Define o tamanho ideal que o painel deve ocupar. 
@@ -40,7 +66,7 @@ public class frmPrincipal extends javax.swing.JDialog
 
         jScrollPane1.setOpaque(false);
         jScrollPane1.getViewport().setOpaque(false);
-        
+
         jScrollPane1.setBorder(null);
         jScrollPane1.setViewportBorder(null);
 
@@ -54,11 +80,10 @@ public class frmPrincipal extends javax.swing.JDialog
 
         // Cria botão personalizado de fechar
         BotaoFechar botao = new BotaoFechar(this);
-
         // Adiciona botão na tela
         botao.adicionar();
 
-// Ativa modo tela cheia
+        // Ativa modo tela cheia
         TelaCheia tela = new TelaCheia(this);
         tela.aplicar();
 
@@ -82,7 +107,33 @@ public class frmPrincipal extends javax.swing.JDialog
         // Se o painel for maior que a tela, a barra de rolagem aparecerá automaticamente.
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
+        // Recalcula a estrutura visual do painel.
+        // O método revalidate() informa ao Swing que o componente mudou
+        // de tamanho, posição ou organização.
+        // Isso faz o Java recalcular o layout visual do jPanel1.
+        // No seu caso, ele é importante porque você alterou:
+        // jPanel1.setPreferredSize(...)
+        // Sem o revalidate(), o JScrollPane pode continuar usando
+        // o tamanho antigo do painel,
+        // causando problemas como:
+        // - scroll não aparecer
+        // - componentes desalinhados
+        // - espaço branco incorreto
+        // - painel não atualizar corretamente
         jPanel1.revalidate();
+
+        // Redesenha visualmente o painel na tela.
+        // O repaint() força o Swing a "pintar novamente"
+        // o componente.
+        // Isso atualiza:
+        // - imagem de fundo
+        // - labels
+        // - textos
+        // - alterações gráficas
+        // - transparências
+        // Sem repaint(), algumas mudanças podem só aparecer
+        // depois que a janela for minimizada,
+        // redimensionada ou atualizada manualmente.
         jPanel1.repaint();
 
         // Define o tamanho ideal que o painel deve ocupar. 
@@ -96,19 +147,46 @@ public class frmPrincipal extends javax.swing.JDialog
         jScrollPane1.getVerticalScrollBar().setPreferredSize(
                 new java.awt.Dimension(35, 0));
 
+        // Deixa o JScrollPane transparente.
+        // Normalmente o JScrollPane possui um fundo padrão (geralmente branco ou cinza).
+        // Quando colocamos "false", o componente para de pintar esse fundo.
+        // Isso é útil quando queremos enxergar uma imagem de fundo atrás dele.
         jScrollPane1.setOpaque(false);
+
+        // Deixa a área interna de visualização (Viewport) transparente.
+        // O Viewport é a "janela" interna do JScrollPane que mostra o conteúdo,
+        // como o jPanel1 com as imagens dos robôs.
+        // Mesmo deixando o JScrollPane transparente,
+        // o Viewport ainda poderia continuar pintando um fundo branco.
+        // Então essa linha remove esse fundo também.
         jScrollPane1.getViewport().setOpaque(false);
-        
+
+        // Remove a borda externa do JScrollPane.
+        // Por padrão o JScrollPane possui uma borda visual cinza/clara.
+        // Isso ajuda a deixar a interface mais limpa e moderna.
         jScrollPane1.setBorder(null);
+
+        // Remove a borda interna da área de visualização (Viewport).
+        // Sem isso, ainda pode aparecer uma linha fina clara ao redor do conteúdo.
         jScrollPane1.setViewportBorder(null);
 
+        // Define que a barra de rolagem vertical ficará sempre visível.
+        // VERTICAL_SCROLLBAR_ALWAYS:
+        // A barra lateral aparece o tempo todo,
+        // mesmo quando não há necessidade de rolar.
+        // Isso é útil em projetos touchscreen,
+        // pois o usuário visualiza imediatamente que a tela pode ser arrastada.
+        // Outras opções:
+        // VERTICAL_SCROLLBAR_AS_NEEDED
+        // -> só aparece quando necessário.
+        // VERTICAL_SCROLLBAR_NEVER
+        // -> nunca aparece.
         jScrollPane1.setVerticalScrollBarPolicy(
                 javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS
         );
 
         // Cria botão fechar
         BotaoFechar botao = new BotaoFechar(this);
-
         // Adiciona botão na tela
         botao.adicionar();
 
@@ -162,6 +240,7 @@ public class frmPrincipal extends javax.swing.JDialog
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblApresentacao1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblApresentacao1.setForeground(new java.awt.Color(255, 255, 255));
         lblApresentacao1.setText("<html>Bem-vindo ao museu espacial. Aqui você irá descobrir um pouco sobre os robôs exploradores criados para uma missão importante de descobrir e analisar o planeta Marte. Abaixo você vai ver as fotos dos robôs e, se clicar nelas, vai conhecer um pouco da história de cada um. Após terminar de conferir as informações dos robôs, por favor, vá para a aba questionários e nos dê uma avaliação de como foi a sua experiência com o nosso totem.");
         jPanel1.add(lblApresentacao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1370, 140));
 
@@ -175,7 +254,8 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblsojournerFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 318, -1));
 
-        lblTituloSojourner1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloSojourner1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloSojourner1.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloSojourner1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloSojourner1.setText("Sojourner");
         jPanel1.add(lblTituloSojourner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 320, 50));
@@ -190,7 +270,8 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblSpiritOpportunityFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 340, -1));
 
-        lblTituloSpiritOpportunity1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloSpiritOpportunity1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloSpiritOpportunity1.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloSpiritOpportunity1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloSpiritOpportunity1.setText("Spirit e Opportunity");
         jPanel1.add(lblTituloSpiritOpportunity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 340, 50));
@@ -205,7 +286,8 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblCuriosityFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 260, 321, 250));
 
-        lblTituloCuriosity1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloCuriosity1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloCuriosity1.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloCuriosity1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloCuriosity1.setText("Curiosity");
         jPanel1.add(lblTituloCuriosity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 320, 50));
@@ -220,7 +302,8 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblFotoPerseverance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 260, 290, -1));
 
-        lblTituloPerseverance1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloPerseverance1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloPerseverance1.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloPerseverance1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloPerseverance1.setText("Perseverance");
         jPanel1.add(lblTituloPerseverance1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 210, 290, 40));
@@ -235,12 +318,14 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblFotoZhurong1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, 318, 220));
 
-        lblTituloZhurong1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloZhurong1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloZhurong1.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloZhurong1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloZhurong1.setText("Zhurong");
         jPanel1.add(lblTituloZhurong1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 330, 39));
 
-        lblTituloViking1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloViking1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloViking1.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloViking1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloViking1.setText("Viking 1");
         jPanel1.add(lblTituloViking1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 530, 300, 39));
@@ -265,7 +350,8 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblFotoInsight, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 580, 340, 220));
 
-        lblTituloInsight.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloInsight.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloInsight.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloInsight.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloInsight.setText("Insight");
         jPanel1.add(lblTituloInsight, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 530, 340, 40));
@@ -280,7 +366,8 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblFotoViking2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 580, 290, 220));
 
-        lblTituloViking2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloViking2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloViking2.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloViking2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloViking2.setText("Viking 2");
         jPanel1.add(lblTituloViking2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 530, 300, 40));
@@ -295,12 +382,14 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblFotoPhoenix, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 860, 320, 210));
 
-        lblTituloPhoenix.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloPhoenix.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloPhoenix.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloPhoenix.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloPhoenix.setText("Phoenix");
         jPanel1.add(lblTituloPhoenix, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 816, 320, 40));
 
         btnFeedback.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnFeedback.setForeground(new java.awt.Color(0, 0, 0));
         btnFeedback.setText("Questionários");
         btnFeedback.addMouseListener(new java.awt.event.MouseAdapter()
         {
@@ -312,7 +401,6 @@ public class frmPrincipal extends javax.swing.JDialog
         jPanel1.add(btnFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 150, 40));
 
         lblFundoTela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FundoMarte.jpg"))); // NOI18N
-        lblFundoTela.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         lblFundoTela.setOpaque(true);
         jPanel1.add(lblFundoTela, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1920, 1090));
 
