@@ -26,29 +26,41 @@ public class frmPrincipal extends javax.swing.JDialog
         // Como este painel está dentro de um JScrollPane (barra de rolagem), 
         // este valor de 1150 de altura determina o limite da área rolável.
         // Se o painel for maior que a tela, a barra de rolagem aparecerá automaticamente.
-        jPanel1.setPreferredSize(new java.awt.Dimension(1450, 1150));
-        
+        jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
+
+        jPanel1.revalidate();
+        jPanel1.repaint();
+
         // Define o tamanho ideal que o painel deve ocupar. 
         // Nota: Em JScrollPanes, isso determina a área total "rolável".
-
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(25);
         // Ajusta a velocidade da rolagem vertical.
         // O valor 25 define que cada "clique" ou movimento do scroll do mouse 
         // deslocará 25 pixels, tornando a navegação mais rápida e suave.
 
+        jScrollPane1.setOpaque(false);
+        jScrollPane1.getViewport().setOpaque(false);
+        
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setViewportBorder(null);
+
         // Aumenta a largura da barra de rolagem vertical
         jScrollPane1.getVerticalScrollBar().setPreferredSize(
-                new java.awt.Dimension(25, 0));
+                new java.awt.Dimension(35, 0));
 
-        // Ativa modo tela cheia
-        TelaCheia tela = new TelaCheia(this);
-        tela.aplicar();
+        jScrollPane1.setVerticalScrollBarPolicy(
+                javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS
+        );
 
         // Cria botão personalizado de fechar
         BotaoFechar botao = new BotaoFechar(this);
 
         // Adiciona botão na tela
         botao.adicionar();
+
+// Ativa modo tela cheia
+        TelaCheia tela = new TelaCheia(this);
+        tela.aplicar();
 
     }
 
@@ -68,11 +80,13 @@ public class frmPrincipal extends javax.swing.JDialog
         // Como este painel está dentro de um JScrollPane (barra de rolagem), 
         // este valor de 1150 de altura determina o limite da área rolável.
         // Se o painel for maior que a tela, a barra de rolagem aparecerá automaticamente.
-        jPanel1.setPreferredSize(new java.awt.Dimension(1450, 1150));
-        
+        jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
+
+        jPanel1.revalidate();
+        jPanel1.repaint();
+
         // Define o tamanho ideal que o painel deve ocupar. 
         // Nota: Em JScrollPanes, isso determina a área total "rolável".
-
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(25);
         // Ajusta a velocidade da rolagem vertical.
         // O valor 25 define que cada "clique" ou movimento do scroll do mouse 
@@ -80,18 +94,28 @@ public class frmPrincipal extends javax.swing.JDialog
 
         // Aumenta a largura da barra de rolagem vertical
         jScrollPane1.getVerticalScrollBar().setPreferredSize(
-                new java.awt.Dimension(25, 0));
+                new java.awt.Dimension(35, 0));
 
-        // Ativa tela cheia
-        TelaCheia tela = new TelaCheia(this);
-        tela.aplicar();
+        jScrollPane1.setOpaque(false);
+        jScrollPane1.getViewport().setOpaque(false);
+        
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setViewportBorder(null);
+
+        jScrollPane1.setVerticalScrollBarPolicy(
+                javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS
+        );
 
         // Cria botão fechar
         BotaoFechar botao = new BotaoFechar(this);
 
         // Adiciona botão na tela
         botao.adicionar();
-        
+
+        // Ativa tela cheia
+        TelaCheia tela = new TelaCheia(this);
+        tela.aplicar();
+
     }
 
     @SuppressWarnings("unchecked")
@@ -121,6 +145,7 @@ public class frmPrincipal extends javax.swing.JDialog
         lblFotoPhoenix = new javax.swing.JLabel();
         lblTituloPhoenix = new javax.swing.JLabel();
         btnFeedback = new javax.swing.JButton();
+        lblFundoTela = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Totem Museo Espacial");
@@ -136,7 +161,7 @@ public class frmPrincipal extends javax.swing.JDialog
         jPanel1.setPreferredSize(new java.awt.Dimension(1500, 950));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblApresentacao1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblApresentacao1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblApresentacao1.setText("<html>Bem-vindo ao museu espacial. Aqui você irá descobrir um pouco sobre os robôs exploradores criados para uma missão importante de descobrir e analisar o planeta Marte. Abaixo você vai ver as fotos dos robôs e, se clicar nelas, vai conhecer um pouco da história de cada um. Após terminar de conferir as informações dos robôs, por favor, vá para a aba questionários e nos dê uma avaliação de como foi a sua experiência com o nosso totem.");
         jPanel1.add(lblApresentacao1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 1370, 140));
 
@@ -150,7 +175,7 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(lblsojournerFoto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 318, -1));
 
-        lblTituloSojourner1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloSojourner1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTituloSojourner1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTituloSojourner1.setText("Sojourner");
         jPanel1.add(lblTituloSojourner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 320, 50));
@@ -286,17 +311,22 @@ public class frmPrincipal extends javax.swing.JDialog
         });
         jPanel1.add(btnFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 150, 40));
 
+        lblFundoTela.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FundoMarte.jpg"))); // NOI18N
+        lblFundoTela.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        lblFundoTela.setOpaque(true);
+        jPanel1.add(lblFundoTela, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1920, 1090));
+
         jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1452, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1440, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1120, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
         );
 
         pack();
@@ -424,6 +454,7 @@ public class frmPrincipal extends javax.swing.JDialog
     private javax.swing.JLabel lblFotoViking1;
     private javax.swing.JLabel lblFotoViking2;
     private javax.swing.JLabel lblFotoZhurong1;
+    private javax.swing.JLabel lblFundoTela;
     private javax.swing.JLabel lblSpiritOpportunityFoto1;
     private javax.swing.JLabel lblTituloCuriosity1;
     private javax.swing.JLabel lblTituloInsight;

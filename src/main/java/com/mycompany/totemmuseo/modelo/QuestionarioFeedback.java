@@ -69,12 +69,12 @@ public class QuestionarioFeedback extends JDialog
         // Lista de strings para a pergunta de sim ou não
         String[] opcoesAgua =
         {
-            "Sim, há milhões de anos atrás.", "Não, Marte nunca teve um registro que de fato tinha uma."
+            "Sim, há bilhões de anos atrás.", "Não, Marte nunca teve um registro que de fato tinha água."
         };
 
         // Adiciona novos objetos do tipo 'Pergunta' na lista dinâmica
         perguntasQuiz.add(new Pergunta("Qual foi o primeiro lander dos EUA a ir para Marte?", robos, "Viking 1"));
-        perguntasQuiz.add(new Pergunta("Segundo as informações que foram vistas aqui, os rovers comprovaram a existência de água em Marte?", opcoesAgua, "Sim, há milhões de anos atrás."));
+        perguntasQuiz.add(new Pergunta("Segundo as informações que foram vistas aqui, os rovers comprovaram a existência de água em Marte?", opcoesAgua, "Sim, há bilhões de anos atrás."));
         perguntasQuiz.add(new Pergunta("Qual rover pousou em uma região de Marte chamada Cratera Jezero?", robos, "Perseverance"));
         perguntasQuiz.add(new Pergunta("Qual foi o primeiro rover dos EUA a ir para Marte?", robos, "Sojourner"));
         perguntasQuiz.add(new Pergunta("Entre todos esses robôs da lista, qual é o da China?", robos, "Zhurong"));
